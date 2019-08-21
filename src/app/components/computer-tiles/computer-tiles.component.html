@@ -1,0 +1,16 @@
+<div *ngIf="!computers || computers.length === 0"><h2>Brak komputerów stacjonarnych</h2></div>
+
+<app-computer-tile *ngFor="let computer of computers"
+                    [computerId]="computer.computerId"
+                    [computerName]="computer.computerName"
+                    [computerSystem]="computer.computerSystem"
+                    [computerProcessor]="computer.computerProcessor"
+                    [computerGraphics]="computer.computerGraphics"
+                    [computerMemory]="computer.computerMemory"
+                    [computerStorageDrivers]="computer.computerStorageDrivers"
+                    [computerInputs]="computer.computerInputs"
+                    [computerWarranty]="computer.computerWarranty"
+                    [computerPrice]="computer.computerPrice"
+                    [computerAmount]="computer.computerAmount"
+                    [computerImage]="computer.computerImage">
+</app-computer-tile>
