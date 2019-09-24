@@ -1,0 +1,11 @@
+<div *ngIf="!softwares || softwares.length === 0"><h2>Brak dostępnych oprogramowań</h2></div>
+
+<app-software-tile *ngFor="let software of softwares"
+  [softwareId]="software.softwareId"
+  [softwareVersion]="software.softwareVersion"
+  [softwareArchitecture]="software.softwareArchitecture"
+  [softwareAmountOfPositions]="software.softwareAmountOfPositions"
+  [softwareLanguage]="software.softwareLanguage"
+  [softwareImage]="software.softwareImage"
+  [softwarePrice]="software.softwarePrice">
+</app-software-tile>

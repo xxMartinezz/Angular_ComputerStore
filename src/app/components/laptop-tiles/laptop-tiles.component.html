@@ -1,0 +1,18 @@
+<div *ngIf="!laptops || laptops.length === 0"><h2>Brak laptopów</h2></div>
+
+<app-laptop-tile *ngFor="let laptop of laptops"
+  [laptopId]="laptop.laptopId"
+  [laptopName]="laptop.laptopName"
+  [laptopSystem]="laptop.laptopSystem"
+  [laptopProcessor]="laptop.laptopProcessor"
+  [laptopGraphics]="laptop.laptopGraphics"
+  [laptopMemory]="laptop.laptopMemory"
+  [laptopStorageDrivers]="laptop.laptopStorageDrives"
+  [laptopInputs]="laptop.laptopInputs"
+  [laptopWarranty]="laptop.laptopWarranty"
+  [laptopPrice]="laptop.laptopPrice"
+  [laptopAmount]="laptop.laptopAmount"
+  [laptopImage]="laptop.laptopImage"
+  [laptopBattery]="laptop.laptopBattery"
+  [laptopScreen]="laptop.laptopScreen">
+</app-laptop-tile>

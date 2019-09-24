@@ -2,15 +2,83 @@
 
     <div class="row">
 
+      
       <div class="card col-sm-4" style="width: 18rem;">
-        <img class="card-img-top" src="" alt="Tile image">
+        <img class="card-img-top" src="\{{computerImage}}" alt="Tile image">
         <div class="card-body">
-          <h5 class="card-title">{{computerName}}</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h4 class="card-title">{{computerName}}</h4>
+          <table class="tile-description">
+                    <thead>
+                    <tr *ngIf="computerProcessor">
+                    <th> Procesor: </th>
+                    <th> {{computerProcessor}} </th>
+                    </tr>
+                    <tr *ngIf="computerGraphics">
+                    <th> Karta graficzna: </th>
+                    <th> {{computerGraphics}} </th>
+                    </tr>
+                    <tr *ngIf="computerMemory">
+                    <th> Pamięć RAM: </th>
+                    <th> {{computerMemory}} </th>
+                    </tr>
+                    <tr *ngIf="computerStorageDrivers">
+                    <th> Dyski: </th>
+                    <th> {{computerStorageDrivers}} </th>
+                    </tr>
+                    <tr *ngIf="computerSystem">
+                    <th> System: </th>
+                    <th> {{computerSystem}} </th>
+                    </tr>
+                    </thead>
+                </table>
+          <h4>{{computerPrice}}</h4>
+          <a routerLink="{{computerId}}" class="btn btn-primary">Sprawdź szczegóły</a>
         </div>
       </div>
+      
+
+      <!--
+      <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="\{{computerImage}}" class="card-img" alt="Tile image">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{computerName}}</h5>
+                <p class="card-text">
+                    <thead>
+                        <tr *ngIf="computerProcessor">
+                        <th> Procesor: </th>
+                        <th> {{computerProcessor}} </th>
+                        </tr>
+                        <tr *ngIf="computerGraphics">
+                        <th> Karta graficzna: </th>
+                        <th> {{computerGraphics}} </th>
+                        </tr>
+                        <tr *ngIf="computerMemory">
+                        <th> Pamięć RAM: </th>
+                        <th> {{computerMemory}} </th>
+                        </tr>
+                        <tr *ngIf="computerStorageDrivers">
+                        <th> Dyski: </th>
+                        <th> {{computerStorageDrivers}} </th>
+                        </tr>
+                        <tr *ngIf="computerSystem">
+                        <th> System: </th>
+                        <th> {{computerSystem}} </th>
+                        </tr>
+                        </thead>
+                </p>
+                <h4>{{computerPrice}}</h4>
+                <a routerLink="{{computerId}}" class="btn btn-primary">Sprawdź szczegóły</a>
+              </div>
+            </div>
+          </div>
+        </div>
+-->
 
     </div>
+
 
 </div>

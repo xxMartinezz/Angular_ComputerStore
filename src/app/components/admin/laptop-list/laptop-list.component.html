@@ -1,0 +1,39 @@
+<div class="container">
+    <div *ngIf="!laptops || laptops.length === 0">Brak komputerów w bazie</div>
+      <table class="table table-hover" *ngIf="laptops.length > 0">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Name</th>
+              <th scope="col">System</th>
+              <th scope="col">Processor</th>
+              <th scope="col">Graphics</th>
+              <th scope="col">Screen</th>
+              <th scope="col">Memory</th>
+              <th scope="col">Storage drivers</th>
+              <th scope="col">Inputs</th>
+              <th scope="col">Battery</th>
+              <th scope="col">Warranty</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let laptop of laptops">
+              <th scope="row">{{laptop.laptopId}}</th>
+              <td>{{laptop.laptopName}}</td>
+              <td>{{laptop.laptopSystem}}</td>
+              <td>{{laptop.laptopProcessor}}</td>
+              <td>{{laptop.laptopGraphics}}</td>
+              <td>{{laptop.laptopScreen}}</td>
+              <td>{{laptop.laptopMemory}}</td>
+              <td>{{laptop.laptopStorageDrives}}</td>
+              <td>{{laptop.laptopInputs}}</td>
+              <td>{{laptop.laptopBattery}}</td>
+              <td>{{laptop.laptopWarranty}}</td>
+              <td>{{laptop.laptopAmount}}</td>
+              <td>{{laptop.laptopPrice}}</td>
+            </tr>
+          </tbody>
+      </table>
+</div>

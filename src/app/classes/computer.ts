@@ -6,10 +6,10 @@ export class Computer
     computerProcessor: string;
     computerGraphics: string;
     computerMemory: string;
-    computerStorageDrives: string;
+    computerStorageDrivers: string;
     computerInputs?: string;
     computerWarranty?: string;
     computerPrice: string;
     coumputerAmount: number;
-    computerImage: string;
+    computerImage?: string;
 }

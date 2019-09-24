@@ -1,0 +1,32 @@
+<div class="container">
+
+    <div class="row">
+
+      <div class="card col-sm-4" style="width: 18rem;">
+        <img class="card-img-top" src="\{{softwareImage}}" alt="Tile image">
+        <div class="card-body">
+          <h4 class="card-title">{{softwareVersion}}</h4>
+          <table class="tile-description">
+                    <thead>
+                    <tr *ngIf="softwareArchitecture">
+                    <th> Architektura: </th>
+                    <th> {{softwareArchitecture}} </th>
+                    </tr>
+                    <tr *ngIf="softwareLicence">
+                    <th> Licencja: </th>
+                    <th> {{softwareLicence}} </th>
+                    </tr>
+                    <tr *ngIf="softwareAmountOfPositions">
+                    <th> Liczba stanowisk: </th>
+                    <th> {{softwareAmountOfPositions}} </th>
+                    </tr>
+                    <tr *ngIf="softwareLanguage">
+                    <th> Język: </th>
+                    <th> {{softwareLanguage}} </th>
+                    </tr>
+                    </thead>
+                </table>
+          <h4>{{softwarePrice}}</h4>
+          <a routerLink="{{softwareId}}" class="btn btn-primary">Sprawdź szczegóły</a>
+        </div>
+</div>

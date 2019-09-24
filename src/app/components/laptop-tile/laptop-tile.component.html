@@ -1,0 +1,37 @@
+<div class="container">
+
+    <div class="row">
+
+      
+      <div class="card col-sm-4" style="width: 18rem;">
+        <img class="card-img-top" src="\{{laptopImage}}" alt="Tile image">
+        <div class="card-body">
+          <h4 class="card-title">{{computerName}}</h4>
+          <table class="tile-description">
+                    <thead>
+                    <tr *ngIf="laptopProcessor">
+                    <th> Procesor: </th>
+                    <th> {{laptopProcessor}} </th>
+                    </tr>
+                    <tr *ngIf="laptopGraphics">
+                    <th> Karta graficzna: </th>
+                    <th> {{laptopGraphics}} </th>
+                    </tr>
+                    <tr *ngIf="laptopMemory">
+                    <th> Pamięć RAM: </th>
+                    <th> {{laptopMemory}} </th>
+                    </tr>
+                    <tr *ngIf="laptopScreen">
+                    <th> Ekran: </th>
+                    <th> {{laptopScreen}} </th>
+                    </tr>
+                    <tr *ngIf="laptopSystem">
+                    <th> System: </th>
+                    <th> {{laptopSystem}} </th>
+                    </tr>
+                    </thead>
+                </table>
+          <h4>{{laptopPrice}}</h4>
+          <a routerLink="{{laptopId}}" class="btn btn-primary">Sprawdź szczegóły</a>
+        </div>
+      </div>

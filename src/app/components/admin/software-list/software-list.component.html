@@ -1,0 +1,27 @@
+<div class="container">
+    <div *ngIf="!softwares || softwares.length === 0">Brak oprogramowań w bazie</div>
+      <table class="table table-hover" *ngIf="softwares.length > 0">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Wersja</th>
+              <th scope="col">Architektura</th>
+              <th scope="col">Licencja</th>
+              <th scope="col">Liczba stanowisk</th>
+              <th scope="col">Język</th>
+              <th scope="col">Cena</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let software of softwares">
+              <th scope="row">{{software.softwareId}}</th>
+              <td>{{software.softwareVersion}}</td>
+              <td>{{software.softwareArchitecture}}</td>
+              <td>{{software.softwareLicence}}</td>
+              <td>{{software.softwareAmountOfPositions}}</td>
+              <td>{{software.softwareLanguage}}</td>
+              <td>{{software.softwarePrice}}</td>
+            </tr>
+          </tbody>
+      </table>
+</div>
