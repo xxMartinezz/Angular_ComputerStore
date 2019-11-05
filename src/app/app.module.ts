@@ -22,6 +22,9 @@ import { AdminComponent } from './components/admin/admin/admin.component';
 import { SoftwareListComponent } from './components/admin/software-list/software-list.component';
 import { ComputerListComponent } from './components/admin/computer-list/computer-list.component';
 import { LaptopListComponent } from './components/admin/laptop-list/laptop-list.component';
+import { ComputerDetailsEditComponent } from './components/admin/computer-details-edit/computer-details-edit.component';
+import {FormsModule} from '@angular/forms'; //dodany import
+import {HttpClientModule} from '@angular/common/http'; //dodany import
 
 @NgModule({
   declarations: [
@@ -44,11 +47,14 @@ import { LaptopListComponent } from './components/admin/laptop-list/laptop-list.
     AdminComponent,
     SoftwareListComponent,
     ComputerListComponent,
-    LaptopListComponent
+    LaptopListComponent,
+    ComputerDetailsEditComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

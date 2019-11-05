@@ -15,8 +15,9 @@ export class ComputerTilesComponent implements OnInit {
 
   ngOnInit() 
   {
-    this.computersService.getComputerList().subscribe (computers => { 
-      this.computers = computers;
+    this.computersService.getComputers().subscribe (computerPage => {
+      console.log('computersPage', computerPage);
+      this.computers = computerPage.content;
     });
   }
 

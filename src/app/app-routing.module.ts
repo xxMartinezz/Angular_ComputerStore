@@ -10,6 +10,7 @@ import { SoftwaresComponent } from './components/softwares/softwares.component';
 import { ComputerListComponent } from './components/admin/computer-list/computer-list.component';
 import { LaptopListComponent } from './components/admin/laptop-list/laptop-list.component';
 import { SoftwareListComponent } from './components/admin/software-list/software-list.component';
+import { ComputerDetailsEditComponent } from './components/admin/computer-details-edit/computer-details-edit.component';
 
 const routes: Routes = [
   {path: "", redirectTo: '/offer', pathMatch: 'full'},
@@ -21,6 +22,7 @@ const routes: Routes = [
   children: [
     {path: "", redirectTo: 'computerList', pathMatch: 'full'},
     {path: "computerList", component: ComputerListComponent},
+    {path: "computerList/new", component: ComputerDetailsEditComponent},
     {path: "laptopList", component: LaptopListComponent},
     {path: "softwareList", component: SoftwareListComponent},
     ]

@@ -8,4 +8,5 @@ export class Software
     softwareLanguage: string;
     softwareImage: string;
     softwarePrice: string;
+    //softwareAmount: number;
 }

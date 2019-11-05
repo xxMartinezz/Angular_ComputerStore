@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Computer } from 'src/app/classes/computer';
+import { Computer, ComputerPage } from 'src/app/classes/computer';
 import { ComputersService } from 'src/app/services/computers.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -10,13 +10,16 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ComputerListComponent implements OnInit {
 
-  private computers: Computer[];
+  private computerList: Computer[];
 
-  constructor(private computersService: ComputersService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private computerService: ComputersService) { }
 
   ngOnInit() 
   {
-    this.computersService.getComputerList().subscribe (computers => { this.computers = computers; });
+    this.computerService.getComputers().subscribe(computersPage => {
+    console.log('computer list', computersPage);
+    this.computerList = computersPage.content;
+    });
   }
 
 }
