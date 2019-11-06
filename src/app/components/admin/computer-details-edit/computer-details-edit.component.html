@@ -3,44 +3,48 @@
   <form (ngSubmit)="onSubmit()" #form="ngForm">
 
     <div>Nazwa:
-      <input type="text" [(ngModel)]="computer.computerName" name="computerName" #computerName="ngModel" required minlength="2">
-      <div *ngIf="computerName?.invalid && (computerName.dirty || computerName.touched)">Nieprawidłowa nazwa komputera</div>      
+      <input type="text" [(ngModel)]="computer.name" name="name" #name="ngModel" required minlength="2">
+      <div *ngIf="name?.invalid && (name.dirty || name.touched)">Nieprawidłowa nazwa komputera</div>      
     </div>
     <div>System:
-        <input type="text" [(ngModel)]="computer.computerSystem" name="computerSystem" #computerSystem="ngModel" required minlength="2">
-        <div *ngIf="computerSystem.invalid && (computerName.dirty || computerSystem.touched)">Nieprawidłowa nazwa systemu</div>      
+        <input type="text" [(ngModel)]="computer.system" name="system" #system="ngModel" required minlength="2">
+        <div *ngIf="system.invalid && (system.dirty || system.touched)">Nieprawidłowa nazwa systemu</div>      
     </div>
     <div>Procesor:
-        <input type="text" [(ngModel)]="computer.computerProcessor" name="computerProcessor" #computerProcessor="ngModel" required minlength="2">
-        <div *ngIf="computerProcessor.invalid && (computerProcessor.dirty || computerProcessor.touched)">Nieprawidłowa nazwa procesora</div>      
+        <input type="text" [(ngModel)]="computer.processor" name="processor" #processor="ngModel" required minlength="2">
+        <div *ngIf="processor.invalid && (processor.dirty || processor.touched)">Nieprawidłowa nazwa procesora</div>      
     </div>
     <div>Grafika:
-        <input type="text" [(ngModel)]="computer.computerGraphics" name="computerGraphics" #computerGraphics="ngModel" required minlength="2">
-        <div *ngIf="computerGraphics.invalid && (computerGraphics.dirty || computerGraphics.touched)">Nieprawidłowa nazwa grafiki</div>      
+        <input type="text" [(ngModel)]="computer.graphics" name="graphics" #graphics="ngModel" required minlength="2">
+        <div *ngIf="graphics.invalid && (graphics.dirty || graphics.touched)">Nieprawidłowa nazwa grafiki</div>      
     </div>
     <div>Pamięć:
-          <input type="text" [(ngModel)]="computer.computerMemory" name="computerMemory" #computerMemory="ngModel" required minlength="2">
-          <div *ngIf="computerMemory.invalid && (computerMemory.dirty || computerMemory.touched)">Nieprawidłowa nazwa pamięci</div>      
+          <input type="text" [(ngModel)]="computer.memory" name="memory" #memory="ngModel" required minlength="2">
+          <div *ngIf="memory.invalid && (memory.dirty || memory.touched)">Nieprawidłowa nazwa pamięci</div>      
     </div>
     <div>Dyski:
-          <input type="text" [(ngModel)]="computer.computerStorageDrivers" name="computerStorageDrivers" #computerStorageDrivers="ngModel" required minlength="2">
-          <div *ngIf="computerStorageDrivers.invalid && (computerStorageDrivers.dirty || computerStorageDrivers.touched)">Nieprawidłowa nazwa dysku</div>      
+          <input type="text" [(ngModel)]="computer.storageDrivers" name="storageDrivers" #storageDrivers="ngModel" required minlength="2">
+          <div *ngIf="storageDrivers.invalid && (storageDrivers.dirty || storageDrivers.touched)">Nieprawidłowa nazwa dysku</div>      
     </div>
     <div>Wejścia/wyjścia:
-        <input type="text" [(ngModel)]="computer.computerInputs" name="computerInputs" #computerInputs="ngModel" required minlength="2">
-        <div *ngIf="computerInputs.invalid && (computerInputs.dirty || computerInputs.touched)">Nieprawidłowa nazwa wejścia/wyjścia</div>      
+        <input type="text" [(ngModel)]="computer.inputs" name="inputs" #inputs="ngModel" required minlength="2">
+        <div *ngIf="inputs.invalid && (inputs.dirty || inputs.touched)">Nieprawidłowa nazwa wejścia/wyjścia</div>      
     </div>
     <div>Gwarancja:
-          <input type="text" [(ngModel)]="computer.computerWarranty" name="computerWarranty" #computerWarranty="ngModel" required minlength="2">
-          <div *ngIf="computerWarranty.invalid && (computerWarranty.dirty || computerWarranty.touched)">Nieprawidłowa nazwa gwarancji</div>      
+          <input type="text" [(ngModel)]="computer.warranty" name="warranty" #warranty="ngModel" required minlength="2">
+          <div *ngIf="warranty.invalid && (warranty.dirty || warranty.touched)">Nieprawidłowa nazwa gwarancji</div>      
     </div>
     <div>Ilość:
-        <input type="number" [(ngModel)]="computer.Amount" name="computerWarranty" #computerWarranty="ngModel" appMinValue="1">
-        <div *ngIf="computerWarranty.invalid && (computerWarranty.dirty || computerWarranty.touched)">Nieprawidłowa ilość</div>      
+        <input type="number" [(ngModel)]="computer.amount" name="amount" #amount="ngModel" appMinValue="1">
+        <div *ngIf="amount.invalid && (amount.dirty || amount.touched)">Nieprawidłowa ilość</div>      
     </div>
     <div>Cena:
-      <input type="text" [(ngModel)]="computer.computerPrice" name="computerPrice" #computerPrice="ngModel" appMinValue="100" required>
-      <div *ngIf="computerPrice.invalid && (computerPrice.dirty || computerPrice.touched)">Nieprawidłowa cena</div>      
+      <input type="text" [(ngModel)]="computer.price" name="price" #price="ngModel" appMinValue="100" required>
+      <div *ngIf="price.invalid && (price.dirty || price.touched)">Nieprawidłowa cena</div>      
+    </div>
+    <div>Zdjęcie:
+      <input type="text" [(ngModel)]="computer.image" name="image" #image="ngModel" required minlength="2">
+      <div *ngIf="image.invalid && (image.dirty || image.touched)">Nieprawidłowa ścieżka do zdjęcia</div>      
     </div>
 
     <button type="submit" [disabled]="form.invalid && (form.dirty || form.touched)">Zapisz</button>

@@ -4,35 +4,35 @@
 
       
       <div class="card col-sm-4" style="width: 18rem;">
-        <img class="card-img-top" src="\{{computerImage}}" alt="Tile image">
+        <img class="card-img-top" src="\{{image}}" alt="Tile image">
         <div class="card-body">
-          <h4 class="card-title">{{computerName}}</h4>
+          <h4 class="card-title">{{name}}</h4>
           <table class="tile-description">
                     <thead>
-                    <tr *ngIf="computerProcessor">
+                    <tr *ngIf="processor">
                     <th> Procesor: </th>
-                    <th> {{computerProcessor}} </th>
+                    <th> {{processor}} </th>
                     </tr>
-                    <tr *ngIf="computerGraphics">
+                    <tr *ngIf="graphics">
                     <th> Karta graficzna: </th>
-                    <th> {{computerGraphics}} </th>
+                    <th> {{graphics}} </th>
                     </tr>
-                    <tr *ngIf="computerMemory">
+                    <tr *ngIf="memory">
                     <th> Pamięć RAM: </th>
-                    <th> {{computerMemory}} </th>
+                    <th> {{memory}} </th>
                     </tr>
-                    <tr *ngIf="computerStorageDrivers">
+                    <tr *ngIf="storageDrivers">
                     <th> Dyski: </th>
-                    <th> {{computerStorageDrivers}} </th>
+                    <th> {{storageDrivers}} </th>
                     </tr>
-                    <tr *ngIf="computerSystem">
+                    <tr *ngIf="system">
                     <th> System: </th>
-                    <th> {{computerSystem}} </th>
+                    <th> {{system}} </th>
                     </tr>
                     </thead>
                 </table>
-          <h4>{{computerPrice}}</h4>
-          <a routerLink="{{computerId}}" class="btn btn-primary">Sprawdź szczegóły</a>
+          <h4>{{price}}</h4>
+          <a routerLink="{{id}}" class="btn btn-primary">Sprawdź szczegóły</a>
         </div>
       </div>
       
@@ -52,21 +52,21 @@
                         <th> Procesor: </th>
                         <th> {{computerProcessor}} </th>
                         </tr>
-                        <tr *ngIf="computerGraphics">
+                        <tr *ngIf="graphics">
                         <th> Karta graficzna: </th>
-                        <th> {{computerGraphics}} </th>
+                        <th> {{graphics}} </th>
                         </tr>
-                        <tr *ngIf="computerMemory">
+                        <tr *ngIf="memory">
                         <th> Pamięć RAM: </th>
-                        <th> {{computerMemory}} </th>
+                        <th> {{memory}} </th>
                         </tr>
-                        <tr *ngIf="computerStorageDrivers">
+                        <tr *ngIf="storageDrivers">
                         <th> Dyski: </th>
-                        <th> {{computerStorageDrivers}} </th>
+                        <th> {{storageDrivers}} </th>
                         </tr>
-                        <tr *ngIf="computerSystem">
+                        <tr *ngIf="system">
                         <th> System: </th>
-                        <th> {{computerSystem}} </th>
+                        <th> {{system}} </th>
                         </tr>
                         </thead>
                 </p>

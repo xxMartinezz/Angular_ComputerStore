@@ -7,18 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ComputerTileComponent implements OnInit {
 
-  @Input() computerId;
-  @Input() computerName;
-  @Input() computerSystem;
-  @Input() computerProcessor;
-  @Input() computerGraphics;
-  @Input() computerMemory;
-  @Input() computerStorageDrivers;
-  @Input() computerInputs;
-  @Input() computerWarranty;
-  @Input() computerPrice;
-  @Input() computerAmount;
-  @Input() computerImage;
+  @Input() id;
+  @Input() name;
+  @Input() system;
+  @Input() processor;
+  @Input() graphics;
+  @Input() memory;
+  @Input() storageDrivers;
+  @Input() inputs;
+  @Input() warranty;
+  @Input() price;
+  @Input() amount;
+  @Input() image;
 
   constructor() { }
 

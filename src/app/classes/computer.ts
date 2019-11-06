@@ -13,31 +13,31 @@ export class ComputerPage
 
 export class Computer
 {
-    computerId: number;
-    computerName: string;
-    computerSystem: string;
-    computerProcessor: string;
-    computerGraphics: string;
-    computerMemory: string;
-    computerStorageDrivers: string;
-    computerInputs?: string;
-    computerWarranty?: string;
-    computerPrice: string;
-    computerAmount: number;
-    computerImage?: string;
+    id: number;
+    name: string;
+    system: string;
+    processor: string;
+    graphics: string;
+    memory: string;
+    storageDrivers: string;
+    inputs?: string;
+    warranty?: string;
+    price: string;
+    amount: number;
+    image?: string;
 
-    constructor(computerName?: string, computerSystem?: string, computerProcessor?: string, computerGraphics?: string, computerMemory?: string, computerStorageDrivers?: string, computerInputs?: string, computerWarranty?: string, computerPrice?: string, computerAmount?: number, computerImage?: string)
+    constructor(name?: string, system?: string, processor?: string, graphics?: string, memory?: string, storageDrivers?: string, inputs?: string, warranty?: string, price?: string, amount?: number, image?: string)
     {
-        this.computerName = computerName;
-        this.computerSystem = computerSystem;
-        this.computerProcessor = computerProcessor;
-        this.computerGraphics = computerGraphics;
-        this.computerMemory = computerMemory;
-        this.computerStorageDrivers = computerStorageDrivers;
-        this.computerInputs = computerInputs;
-        this.computerWarranty = computerWarranty;
-        this.computerPrice = computerPrice;
-        this.computerAmount = computerAmount;
-        this.computerImage = computerImage;
+        this.name = name;
+        this.system = system;
+        this.processor = processor;
+        this.graphics = graphics;
+        this.memory = memory;
+        this.storageDrivers = storageDrivers;
+        this.inputs = inputs;
+        this.warranty = warranty;
+        this.price = price;
+        this.amount = amount;
+        this.image = image;
     }
 }
